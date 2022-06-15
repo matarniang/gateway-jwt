@@ -1,0 +1,35 @@
+{
+  "gatewaySmcApp": {
+    "nessicoDemandeNessico": {
+      "home": {
+        "title": "Demande Nessicos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Demande Nessico",
+        "createOrEditLabel": "Create or edit a Demande Nessico",
+        "notFound": "No Demande Nessicos found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Demande Nessico {{ id }}?"
+      },
+      "detail": {
+        "title": "Demande Nessico"
+      },
+      "id": "ID",
+      "nomApp": "Nom App",
+      "password": "Password",
+      "action": "Action",
+      "status": "Status",
+      "message": "Message",
+      "dateDemande": "Date Demande",
+      "dateRetour": "Date Retour",
+      "user": "User"
+    }
+  },
+  "nessicoApp": {
+    "nessicoDemandeNessico": {
+      "created": "A new Demande Nessico is created with identifier {{ param }}",
+      "updated": "A Demande Nessico is updated with identifier {{ param }}",
+      "deleted": "A Demande Nessico is deleted with identifier {{ param }}"
+    }
+  }
+}

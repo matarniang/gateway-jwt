@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="demande">
+      <h2 data-cy="demandeDetailsHeading"><span jhiTranslate="gatewaySmcApp.smoAppDemande.detail.title">Demande</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ demande.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.nomApp">Nom App</span></dt>
+        <dd>
+          <span>{{ demande.nomApp }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.password">Password</span></dt>
+        <dd>
+          <span>{{ demande.password }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.action">Action</span></dt>
+        <dd>
+          <span>{{ demande.action }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.status">Status</span></dt>
+        <dd>
+          <span>{{ demande.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.message">Message</span></dt>
+        <dd>
+          <span>{{ demande.message }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.dateDemande">Date Demande</span></dt>
+        <dd>
+          <span>{{ demande.dateDemande | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.dateRetour">Date Retour</span></dt>
+        <dd>
+          <span>{{ demande.dateRetour | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewaySmcApp.smoAppDemande.user">User</span></dt>
+        <dd>
+          <span>{{ demande.user }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/demande', demande.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

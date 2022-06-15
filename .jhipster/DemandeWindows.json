@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220506092638",
+  "clientRootFolder": "windows",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "demande_windows",
+  "fields": [
+    {
+      "fieldName": "nomApp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateDemande",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateRetour",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "user",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "windows",
+  "microservicePath": "../windows",
+  "name": "DemandeWindows",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

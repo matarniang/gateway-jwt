@@ -19,6 +19,7 @@
     "enableHibernateCache": false,
     "enableSwaggerCodegen": false,
     "enableTranslation": true,
+    "entities": ["Demande", "DemandeWindows", "DemandeNessico", "DemandeOracle"],
     "entitySuffix": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.8.1",

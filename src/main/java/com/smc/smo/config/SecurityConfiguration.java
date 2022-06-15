@@ -1,7 +1,5 @@
 package com.smc.smo.config;
-
 import static org.springframework.security.web.server.util.matcher.ServerWebExchangeMatchers.pathMatchers;
-
 import com.smc.smo.security.AuthoritiesConstants;
 import com.smc.smo.security.SecurityUtils;
 import com.smc.smo.security.oauth2.AudienceValidator;
@@ -79,9 +77,9 @@ public class SecurityConfiguration {
                 pathMatchers("/app/**", "/i18n/**", "/content/**", "/swagger-ui/**", "/v3/api-docs/**", "/test/**"),
                 pathMatchers(HttpMethod.OPTIONS, "/**")
             )))
-            .csrf()
-                .csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())
-        .and()
+            .csrf().disable()
+                // .csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())
+        // .and()
             // See https://github.com/spring-projects/spring-security/issues/5766
             .addFilterAt(new CookieCsrfFilter(), SecurityWebFiltersOrder.REACTOR_CONTEXT)
             .addFilterAt(new SpaWebFilter(), SecurityWebFiltersOrder.AUTHENTICATION)
@@ -102,6 +100,10 @@ public class SecurityConfiguration {
             .pathMatchers("/").permitAll()
             .pathMatchers("/*.*").permitAll()
             .pathMatchers("/api/authenticate").permitAll()
+            .pathMatchers("/api/authenticate-mobile").permitAll()
+            .pathMatchers("/api/loginad").permitAll()
+            .pathMatchers("/api/userinfo").permitAll()
+            .pathMatchers("/api/sendMailer").permitAll()
             .pathMatchers("/api/auth-info").permitAll()
             .pathMatchers("/api/admin/**").hasAuthority(AuthoritiesConstants.ADMIN)
             .pathMatchers("/api/**").authenticated()
@@ -109,7 +111,8 @@ public class SecurityConfiguration {
             .pathMatchers("/services/*/*.js").permitAll()
             .pathMatchers("/services/*/*.js.map").permitAll()
             .pathMatchers("/services/*/v3/api-docs").hasAuthority(AuthoritiesConstants.ADMIN)
-            .pathMatchers("/services/**").authenticated()
+            .pathMatchers("/services/**").permitAll()
+            // .pathMatchers("/services/**").authenticated()
             .pathMatchers("/management/health").permitAll()
             .pathMatchers("/management/health/**").permitAll()
             .pathMatchers("/management/info").permitAll()

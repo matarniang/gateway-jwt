@@ -1,0 +1,35 @@
+{
+  "gatewaySmcApp": {
+    "oracleDemandeOracle": {
+      "home": {
+        "title": "Demande Oracles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Demande Oracle",
+        "createOrEditLabel": "Create or edit a Demande Oracle",
+        "notFound": "No Demande Oracles found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Demande Oracle {{ id }}?"
+      },
+      "detail": {
+        "title": "Demande Oracle"
+      },
+      "id": "ID",
+      "nomApp": "Nom App",
+      "password": "Password",
+      "action": "Action",
+      "status": "Status",
+      "message": "Message",
+      "dateDemande": "Date Demande",
+      "dateRetour": "Date Retour",
+      "user": "User"
+    }
+  },
+  "oracleApp": {
+    "oracleDemandeOracle": {
+      "created": "A new Demande Oracle is created with identifier {{ param }}",
+      "updated": "A Demande Oracle is updated with identifier {{ param }}",
+      "deleted": "A Demande Oracle is deleted with identifier {{ param }}"
+    }
+  }
+}

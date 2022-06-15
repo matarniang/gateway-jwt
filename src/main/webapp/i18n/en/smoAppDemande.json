@@ -1,0 +1,35 @@
+{
+  "gatewaySmcApp": {
+    "smoAppDemande": {
+      "home": {
+        "title": "Demandes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Demande",
+        "createOrEditLabel": "Create or edit a Demande",
+        "notFound": "No Demandes found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Demande {{ id }}?"
+      },
+      "detail": {
+        "title": "Demande"
+      },
+      "id": "ID",
+      "nomApp": "Nom App",
+      "password": "Password",
+      "action": "Action",
+      "status": "Status",
+      "message": "Message",
+      "dateDemande": "Date Demande",
+      "dateRetour": "Date Retour",
+      "user": "User"
+    }
+  },
+  "smoApp": {
+    "smoAppDemande": {
+      "created": "A new Demande is created with identifier {{ param }}",
+      "updated": "A Demande is updated with identifier {{ param }}",
+      "deleted": "A Demande is deleted with identifier {{ param }}"
+    }
+  }
+}

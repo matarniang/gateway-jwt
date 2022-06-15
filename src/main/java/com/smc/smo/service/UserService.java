@@ -1,5 +1,4 @@
 package com.smc.smo.service;
-
 import com.smc.smo.config.Constants;
 import com.smc.smo.domain.Authority;
 import com.smc.smo.domain.User;

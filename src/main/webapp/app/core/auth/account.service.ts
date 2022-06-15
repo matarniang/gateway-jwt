@@ -48,6 +48,8 @@ export class AccountService {
       this.accountCache$ = this.fetch().pipe(
         tap((account: Account) => {
           this.authenticate(account);
+          // console.log('compte:', account);
+          localStorage.setItem('login', account.login);
 
           // After retrieve the account info, the language will be changed to
           // the user's preferred language configured in the account setting

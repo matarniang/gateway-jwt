@@ -216,13 +216,13 @@ jhipster:
   clientApp:
     name: 'gatewaySmcApp'
   # By default CORS is disabled. Uncomment to enable.
-  # cors:
-  #   allowed-origins: "http://localhost:8100,http://localhost:9000"
-  #   allowed-methods: "*"
-  #   allowed-headers: "*"
-  #   exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
-  #   allow-credentials: true
-  #   max-age: 1800
+  cors:
+    allowed-origins: "http://localhost:8100,http://localhost:9000"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
+    allow-credentials: true
+    max-age: 1800
   mail:
     from: gatewaySMC@localhost
   api-docs:
@@ -252,4 +252,36 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+# application: xBXyKsW1H4gWjA4YKeSKslNEhffkV77A
+
+#SECURITY BASED CONFIGURATIONS
+# app:
+#   config:
+#     keycloak:
+#       url: http://localhost:8080/auth
+#       realm: malado
+
+# spring:
+#   security:
+#     oauth2:
+#       client:
+#         provider:
+#           keycloak:
+#             token-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/token
+#             authorization-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/auth
+#             user-name-attribute: preferred_username
+#             user-info-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/userinfo
+#             jwk-set-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/certs
+#             user-info-authentication-method: header
+#         registration:
+#           internet-banking-core-client:
+#             provider: keycloak
+#             client-id: internet-banking-core-client
+#             client-secret: 0efd3e37-258e-4488-96ae-1dfe34679c9d
+#             authorization-grant-type: authorization_code
+#             redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+#             scope: openid
+#       resourceserver:
+#         jwt:
+#           jwk-set-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/certs
+            

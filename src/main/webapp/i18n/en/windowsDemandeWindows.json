@@ -1,0 +1,35 @@
+{
+  "gatewaySmcApp": {
+    "windowsDemandeWindows": {
+      "home": {
+        "title": "Demande Windows",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Demande Windows",
+        "createOrEditLabel": "Create or edit a Demande Windows",
+        "notFound": "No Demande Windows found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Demande Windows {{ id }}?"
+      },
+      "detail": {
+        "title": "Demande Windows"
+      },
+      "id": "ID",
+      "nomApp": "Nom App",
+      "password": "Password",
+      "action": "Action",
+      "status": "Status",
+      "message": "Message",
+      "dateDemande": "Date Demande",
+      "dateRetour": "Date Retour",
+      "user": "User"
+    }
+  },
+  "windowsApp": {
+    "windowsDemandeWindows": {
+      "created": "A new Demande Windows is created with identifier {{ param }}",
+      "updated": "A Demande Windows is updated with identifier {{ param }}",
+      "deleted": "A Demande Windows is deleted with identifier {{ param }}"
+    }
+  }
+}

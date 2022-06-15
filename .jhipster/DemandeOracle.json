@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220527075950",
+  "clientRootFolder": "oracle",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "demande_oracle",
+  "fields": [
+    {
+      "fieldName": "nomApp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateDemande",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateRetour",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "user",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "oracle",
+  "microservicePath": "../oracle",
+  "name": "DemandeOracle",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

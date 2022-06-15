@@ -28,6 +28,7 @@
         <java.version>11</java.version>
         <node.version>v16.14.0</node.version>
         <npm.version>8.6.0</npm.version>
+        <sun-mail.version>1.5.4</sun-mail.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -54,7 +55,7 @@
         <hibernate.version>5.6.7.Final</hibernate.version>
         <!-- The liquibase version should match the one managed by
         https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies/${spring-boot.version} -->
-        <liquibase.version>4.6.1</liquibase.version>
+        <liquibase.version>4.9.1</liquibase.version>
         <h2.version>1.4.200</h2.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
@@ -107,6 +108,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>${sun-mail.version}</version>
+        </dependency>
         <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
@@ -1015,7 +1021,36 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <dependencies>
-                <dependency>
+
+
+<dependency>
+    <groupId>org.keycloak</groupId>
+    <artifactId>keycloak-admin-client</artifactId>
+    <version>18.0.0</version>
+</dependency>
+<dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxrs</artifactId>
+      <version>3.0.2.Final</version>
+   </dependency>
+   <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-client</artifactId>
+      <version>3.0.2.Final</version>
+   </dependency>
+   <dependency>
+  <groupId>org.jboss.resteasy</groupId>
+  <artifactId>resteasy-jackson2-provider</artifactId>
+  <version>3.11.1.Final</version>
+</dependency>
+
+
+             <dependency>
+              <groupId>org.json</groupId>
+              <artifactId>json</artifactId>
+              <version>20211205</version>
+              </dependency>
+             <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-devtools</artifactId>
                     <optional>true</optional>
