@@ -1,0 +1,35 @@
+{
+  "gatewayApp": {
+    "windowsDemandeWindows": {
+      "home": {
+        "title": "DemandeWindows",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Demande Windows",
+        "createOrEditLabel": "Créer ou éditer un Demande Windows",
+        "notFound": "Aucun Demande Windows trouvé"
+      },
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Demande Windows {{ id }} ?"
+      },
+      "detail": {
+        "title": "Demande Windows"
+      },
+      "id": "ID",
+      "nomApp": "Nom App",
+      "password": "Password",
+      "action": "Action",
+      "status": "Status",
+      "message": "Message",
+      "dateDemande": "Date Demande",
+      "dateRetour": "Date Retour",
+      "user": "User"
+    }
+  },
+  "windowsApp": {
+    "windowsDemandeWindows": {
+      "created": "Un nouveau Demande Windows a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Demande Windows avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Demande Windows avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="demandeOracle">
+      <h2 data-cy="demandeOracleDetailsHeading"><span jhiTranslate="gatewayApp.oracleDemandeOracle.detail.title">Demande Oracle</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ demandeOracle.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.nomApp">Nom App</span></dt>
+        <dd>
+          <span>{{ demandeOracle.nomApp }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.password">Password</span></dt>
+        <dd>
+          <span>{{ demandeOracle.password }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.action">Action</span></dt>
+        <dd>
+          <span>{{ demandeOracle.action }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.status">Status</span></dt>
+        <dd>
+          <span>{{ demandeOracle.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.message">Message</span></dt>
+        <dd>
+          <span>{{ demandeOracle.message }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.dateDemande">Date Demande</span></dt>
+        <dd>
+          <span>{{ demandeOracle.dateDemande | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.dateRetour">Date Retour</span></dt>
+        <dd>
+          <span>{{ demandeOracle.dateRetour | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.oracleDemandeOracle.user">User</span></dt>
+        <dd>
+          <span>{{ demandeOracle.user }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/demande-oracle', demandeOracle.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

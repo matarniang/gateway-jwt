@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="demandeNessico">
+      <h2 data-cy="demandeNessicoDetailsHeading">
+        <span jhiTranslate="gatewayApp.nessicoDemandeNessico.detail.title">Demande Nessico</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ demandeNessico.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.nomApp">Nom App</span></dt>
+        <dd>
+          <span>{{ demandeNessico.nomApp }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.password">Password</span></dt>
+        <dd>
+          <span>{{ demandeNessico.password }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.action">Action</span></dt>
+        <dd>
+          <span>{{ demandeNessico.action }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.status">Status</span></dt>
+        <dd>
+          <span>{{ demandeNessico.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.message">Message</span></dt>
+        <dd>
+          <span>{{ demandeNessico.message }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.dateDemande">Date Demande</span></dt>
+        <dd>
+          <span>{{ demandeNessico.dateDemande | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.dateRetour">Date Retour</span></dt>
+        <dd>
+          <span>{{ demandeNessico.dateRetour | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gatewayApp.nessicoDemandeNessico.user">User</span></dt>
+        <dd>
+          <span>{{ demandeNessico.user }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/demande-nessico', demandeNessico.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

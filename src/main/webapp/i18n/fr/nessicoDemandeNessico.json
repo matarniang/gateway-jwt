@@ -1,0 +1,35 @@
+{
+  "gatewayApp": {
+    "nessicoDemandeNessico": {
+      "home": {
+        "title": "DemandeNessicos",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Demande Nessico",
+        "createOrEditLabel": "Créer ou éditer un Demande Nessico",
+        "notFound": "Aucun Demande Nessico trouvé"
+      },
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Demande Nessico {{ id }} ?"
+      },
+      "detail": {
+        "title": "Demande Nessico"
+      },
+      "id": "ID",
+      "nomApp": "Nom App",
+      "password": "Password",
+      "action": "Action",
+      "status": "Status",
+      "message": "Message",
+      "dateDemande": "Date Demande",
+      "dateRetour": "Date Retour",
+      "user": "User"
+    }
+  },
+  "nessicoApp": {
+    "nessicoDemandeNessico": {
+      "created": "Un nouveau Demande Nessico a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Demande Nessico avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Demande Nessico avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}
